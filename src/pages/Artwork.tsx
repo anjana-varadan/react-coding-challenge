@@ -1,11 +1,12 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import { Artworktype } from '../utils/types';
+import axios from 'axios';
 import { Card, Col, Container, Row, Button, Spinner } from 'react-bootstrap';
 
 function Artwork() {
-    const param = useParams()
+    const { id } = useParams();
+    const location = useLocation();
     const [artwork, setArtwork] = useState<Artworktype | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const navigate = useNavigate();
@@ -14,9 +15,8 @@ function Artwork() {
         fetchData();
     }, []);
 
-    //axios for fetching data which given id
     const fetchData = () => {
-        axios.get(`https://api.artic.edu/api/v1/artworks/${param.id}`)
+        axios.get(`https://api.artic.edu/api/v1/artworks/${id}`)
             .then(response => {
                 setArtwork(response.data.data);
                 setLoading(false);
@@ -27,9 +27,10 @@ function Artwork() {
             });
     }
 
-    //navigating to previous page
+    // Function to handle "Go Back" button click
     const handleGoBack = () => {
-        navigate(-1);
+        const previousUrl = location.state?.from || '/'; // Get the previous URL from location state or go to home page
+        navigate(previousUrl);
     };
 
     return (

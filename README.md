@@ -1,6 +1,18 @@
 # react-coding-challenge
 # Delivery React Coding Challenge
 
+## Table of Contents
+- Goal
+- Instructions
+- Basic Requirements
+- Evaluation Critiera
+- Artswork
+- Installation
+- Technologies Used
+- Folder Structure
+- Components
+- Design Decisions
+
 ## 1. Goal
 
 Your goal is to build a react app that displays a list of books. We will provide guidelines and feature requests below, but ultimately the design and functionality of your app is up to you. Keep in mind functionality and code quality is more important than asthetic design.  The code you write should be maintanable and easy to understand.
@@ -37,3 +49,55 @@ When you are finished please submit a pull request.
 - Code and component reuse/extensibility
 - Code design
 - Ability to write clear documentation
+
+
+## ARTSWORK
+
+This is a single-page React application built using TypeScript, designed to display artwork retrieved from an API. The application features responsive design, pagination, artwork detail pages, search functionality, filtering by category, and a comments form for feedback.
+
+## Installation
+- Prerequisites: Node.js, VS Code
+- npm install
+Usage
+To install node modules
+
+- npm start
+Usage
+To start the react application 
+
+## Technologies Used
+- React: Used for building the user interface components.
+- TypeScript: Provides type safety and enhanced tooling for the application.
+- React Bootstrap: Utilized for styling and responsive design.
+- React Router DOM: Handles routing between different pages of the application.
+- Axios: Used for making HTTP requests to the API.
+- useState: Manages state within components.
+- useEffect: Handles API calls and other side effects.
+- useNavigate: Navigates to different components within the application.
+
+## Folder Structure
+src/                  # Source files
+  |-- components/     # Reusable components
+  |-- pages/          # Application pages
+  |-- utils/          # types
+  |-- App.tsx         # Main application component
+public/               # Public assets
+  |-- index.html      # HTML template
+
+## Components
+- Header: Navbar component with links to the home page and feedback page.
+- Home Page: Displays a list of cards with thumbnails and titles of artworks.
+- Artwork Detail Page: Shows detailed information about a selected artwork.
+- Comment Form Page: Provides a feedback form for users.
+- DisplayCard: Component to display cards with thumbnails and titles.
+- Custom Pagination: Component for navigating between pages of artworks.
+- Search: Component for searching artworks by title.
+- Filter: Component for filtering artworks by category.
+
+## Design Decisions
+- Responsive Design: React Bootstrap was chosen for responsive styling to ensure a consistent user experience across different devices.
+- Atomic Design Pattern: Components were organized according to the atomic design pattern for better reusability and maintainability.
+- Component-Based Architecture: Smaller atomic module components were created to promote reusability and maintainability.
+- State Management: useState hook was used for managing component-level state.
+- Routing: React Router DOM was employed for handling navigation between different pages of the application.
+- API Integration: Axios was chosen for making HTTP requests to retrieve artwork data from the provided API.
