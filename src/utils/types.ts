@@ -24,3 +24,7 @@ export type FormData = {
     email: string;
     comment: string;
 }
+
+export type SearchProps = {
+    onSearch: (searchTerm: string) => void;
+}

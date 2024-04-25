@@ -24,7 +24,6 @@ const CommentsForm: React.FC = () => {
     const validationErrors = validateForm(formData);
     if (Object.keys(validationErrors).length === 0) {
       // Form is valid, can proceed with submission
-      console.log('Form data:', formData);
       setSubmitted(true);
       // Clear form fields
       setFormData({

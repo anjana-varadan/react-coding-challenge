@@ -2,12 +2,12 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 
-interface SearchProps {
+type SearchProps = {
     onSearch: (searchTerm: string) => void;
 }
 
-const Search: React.FC<SearchProps> = ({ onSearch }) => {
-    const [searchTerm, setSearchTerm] = useState<string>('');
+const Search = ({ onSearch }: SearchProps) => {
+    const [searchTerm, setSearchTerm] = useState('');
 
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(event.target.value);
@@ -28,7 +28,7 @@ const Search: React.FC<SearchProps> = ({ onSearch }) => {
                     value={searchTerm}
                     onChange={handleSearchChange}
                 />
-                <Button type="submit" variant="primary">Search</Button>
+                <Button style={{marginLeft:'6px'}} type="submit" variant="primary">Search</Button>
             </div>
         </Form>
     );

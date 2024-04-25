@@ -6,7 +6,6 @@ function Filter(props: { categories: string[], handleSelection: any }) {
     const handleClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         const selectedItem = event.currentTarget.textContent;
         handleSelection(selectedItem);
-        console.log(selectedItem)
     }
 
     return (

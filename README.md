@@ -57,13 +57,8 @@ This is a single-page React application built using TypeScript, designed to disp
 
 ## Installation
 - Prerequisites: Node.js, VS Code
-- npm install
-Usage
-To install node modules
-
-- npm start
-Usage
-To start the react application 
+- npm install : To install node modules
+- npm start : To start the react application 
 
 ## Technologies Used
 - React: Used for building the user interface components.
@@ -82,6 +77,7 @@ To start the react application
 This directory contains all the source code for the project.
 
 - `components/`: Contains reusable components used across the application.
+- `context/` : contains context to save the page number state 
 - `pages/`: Contains the pages of the application.
 - `utils/`: Contains utility functions and types used throughout the project.
 - `App.tsx`: The main application component that serves as the entry point of the application.
