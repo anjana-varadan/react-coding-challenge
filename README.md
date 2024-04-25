@@ -76,13 +76,22 @@ To start the react application
 - useNavigate: Navigates to different components within the application.
 
 ## Folder Structure
-src/                  # Source files
-  |-- components/     # Reusable components
-  |-- pages/          # Application pages
-  |-- utils/          # types
-  |-- App.tsx         # Main application component
-public/               # Public assets
-  |-- index.html      # HTML template
+
+### `src/`
+
+This directory contains all the source code for the project.
+
+- `components/`: Contains reusable components used across the application.
+- `pages/`: Contains the pages of the application.
+- `utils/`: Contains utility functions and types used throughout the project.
+- `App.tsx`: The main application component that serves as the entry point of the application.
+
+### `public/`
+
+This directory contains public assets used in the project.
+
+- `index.html`: The HTML template file for the application.
+
 
 ## Components
 - Header: Navbar component with links to the home page and feedback page.
